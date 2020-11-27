@@ -4,7 +4,8 @@
   "description": "Single page application, vanilla javascript, html5 and css3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "webpack --mode production",
+    "start" : "webpack-dev-servver --open --mode development"
   },
   "keywords": [
     "javascript",
