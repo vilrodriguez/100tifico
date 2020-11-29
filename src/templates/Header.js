@@ -11,6 +11,6 @@ const Header = () => {
       </nav>
     </header>
   `;
-  return view;
+    return view;
 }
 export default Header;
