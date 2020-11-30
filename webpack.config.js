@@ -23,12 +23,11 @@ module.exports = {
   //ahora un modulo con reglas para producción
   // en este caso babel para que cualquier navegador tome el proyecto
   module: {
-    
     rules: [
       {
         //extructura de babel
         test: /\.js?$/,  //regex para detectar archivos js
-        exclude: /node_module/, // que excluya todo lo que encuentre en esta carpeta de archivos js
+        exclude: /node_modules/, // que excluya todo lo que encuentre en esta carpeta de archivos js
         use: {
           loader: 'babel-loader',
         }
@@ -37,13 +36,13 @@ module.exports = {
   },
   //establecer pulgings a usar
   plugins: [
-    //se le pasa un arreglo de cada plugin
-    new HtmlWebpackPlugin([
+    //se le pasa un objeto de cada plugin
+    new HtmlWebpackPlugin(
       {
         inject: true,
-        template: './public/index.hmtl',
+        template: './public/index.html',
         filename: './index.html',
       }
-    ])
+    )
   ]
 }

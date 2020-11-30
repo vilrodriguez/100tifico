@@ -10,7 +10,8 @@ const Header = () => {
         <a href="#/about/">About</a>
       </nav>
     </header>
-  `;
-    return view;
-}
+`;
+  return view;
+};
+
 export default Header;
