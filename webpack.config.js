@@ -2,6 +2,7 @@
 // HtmlWebpackPlugin to be able to work with html
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPluging = require('copy-webpack-plugin');
 
 //module que va a exportar paso a paso lo que se va a mandar a producción
 // es un objeto donde vive la configuración del proyecto
@@ -43,6 +44,12 @@ module.exports = {
         template: './public/index.html',
         filename: './index.html',
       }
-    )
+    ),
+    // copy css style file for deployment
+    new CopyWebpackPluging({
+      patterns: [{
+      from: './src/styles/styles.css',
+      to: ''}],
+    })
   ]
 }
